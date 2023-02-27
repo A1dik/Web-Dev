@@ -1,0 +1,6 @@
+<h1>Categories</h1>
+<h5>(для выбора категории поставьте галочку)</h5>
+    <button *ngFor="let category of categories"><input type="checkbox" [checked]="category.choose" (change)="update(category)">{{category.type}}</button>
+
+<p>Your likes: {{likes}}</p>
+<app-product-list [status]="show" (numLiked)="like($event)"></app-product-list>
